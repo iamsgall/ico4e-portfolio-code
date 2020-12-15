@@ -3,7 +3,6 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import Particles from '../functions/Particles';
 import Header from '../components/Header';
 import Link from 'next/link';
-import styles from '../styles/Portfolio.module.sass';
 
 export default function Portfolio() {
   return (
@@ -32,7 +31,6 @@ export default function Portfolio() {
                   style={{width: '20rem', opacity: 0.94}}
                 >
                   <div className='card-body'>
-                    <h5 className={styles.card_title}>Design UX / UI</h5>
                     <p
                       className='card-icon'
                       style={{
@@ -76,7 +74,6 @@ export default function Portfolio() {
                 >
                   <div className='card-body'>
                     <h5
-                      className={styles.card_title}
                       style={{
                         color: '#fff',
                       }}
@@ -128,9 +125,7 @@ export default function Portfolio() {
                   style={{width: '20rem', opacity: 0.94}}
                 >
                   <div className='card-body'>
-                    <h5 className={styles.card_title}>
-                      Courses and Certifications
-                    </h5>
+                    <h5>Courses and Certifications</h5>
                     <p
                       className='card-icon my-2'
                       style={{
