@@ -1,0 +1,61 @@
+@import '../utils/_variables'
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap')
+
+.card_title
+    font-family: 'Quicksand', cursive
+    font-size: 22px
+    color: #464646
+    // font-weight: 700
+
+.card_icon
+    color: #9270be
+    font-size: 1.625rem
+    margin: 0
+
+%btn
+    font-family: $primary
+    letter-spacing: .8px
+    font-size: 16px
+    border-radius: 0
+    margin: 0 8px
+
+.btn-primary
+    @extend %btn
+    background: #9270be
+    border: .4px solid #9270be
+    &:hover
+        background: #8465AC
+        border: .4px solid #8465AC
+        color: #fff
+        .primary-arrow-right
+            animation: left-right 1s ease infinite
+
+    @keyframes left-right
+        0%
+            transform: translateX(6px)
+
+        25%
+            transform: translateX(0px)
+
+        100%
+            transform: translateX(6px)
+
+.middle-card
+    background: rgb(163, 112, 190)!important
+    opacity: .9
+    border: none
+
+.btn-outline-primary
+    @extend %btn
+    border-color: #fff
+    color: #fff
+    &:hover
+        background: #ffffff
+        color: #2f3640
+        .primary-arrow-right
+            animation: left-right 1s ease infinite
+            color: #2f3640
+
+@media screen and ( min-width: 992px )
+    .height-card
+        height: 70vh
