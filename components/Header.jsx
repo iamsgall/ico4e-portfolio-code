@@ -5,7 +5,7 @@ import Link from 'next/link';
 export default function Header() {
   return (
     <nav
-      class='navbar navbar-light '
+      className='navbar navbar-light '
       style={{
         background: 'rgba(0,0,0,.1)',
       }}

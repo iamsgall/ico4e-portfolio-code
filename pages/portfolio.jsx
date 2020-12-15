@@ -2,6 +2,8 @@ import React from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import Particles from '../functions/Particles';
 import Header from '../components/Header';
+import Link from 'next/link';
+import styles from '../styles/Portfolio.module.sass';
 
 export default function Portfolio() {
   return (
@@ -60,16 +62,15 @@ export default function Portfolio() {
                       Ease to create, design, and adapt web user interface with
                       the help of AdobeXD and Photoshop
                     </p>
-                    <button
-                      className='btn btn-primary shadow-sm rounded py-2 px-3'
-                      onClick={() => history.push('/portfolio/design')}
-                    >
-                      See Details
-                      <FontAwesomeIcon
-                        className='ml-2 primary-arrow-right'
-                        icon='chevron-right'
-                      />
-                    </button>
+                    <Link href='/portfolio/designs'>
+                      <a className='btn btn-primary shadow-sm rounded py-2 px-3'>
+                        See Details
+                        <FontAwesomeIcon
+                          className='ml-2 primary-arrow-right'
+                          icon='chevron-right'
+                        />
+                      </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -112,16 +113,18 @@ export default function Portfolio() {
                       Knowledge to integrate Frontend and Backend. Use of APIs.
                       Responsive design and more.
                     </p>
-                    <button
-                      className='btn btn-outline-primary shadow-sm rounded py-2 px-3'
-                      onClick={() => history.push('/portfolio/development')}
-                    >
-                      See Details
-                      <FontAwesomeIcon
-                        className='ml-2 primary-arrow-right'
-                        icon='chevron-right'
-                      />
-                    </button>
+                    <Link href='/portfolio/developments'>
+                      <a
+                        className='btn btn-outline-primary shadow-sm rounded py-2 px-3'
+                        onClick={() => history.push('/portfolio/development')}
+                      >
+                        See Details
+                        <FontAwesomeIcon
+                          className='ml-2 primary-arrow-right'
+                          icon='chevron-right'
+                        />
+                      </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -164,16 +167,18 @@ export default function Portfolio() {
                       Self-taught through official documentation, YouTube, and
                       study platforms such as Platzi
                     </p>
-                    <button
-                      className='btn btn-primary shadow-sm rounded py-2 px-3'
-                      onClick={() => history.push('/portfolio/courses')}
-                    >
-                      See Details
-                      <FontAwesomeIcon
-                        className='ml-2 primary-arrow-right'
-                        icon='chevron-right'
-                      />
-                    </button>
+                    <Link href='/portfolio/courses'>
+                      <a
+                        className='btn btn-primary shadow-sm rounded py-2 px-3'
+                        onClick={() => history.push('/portfolio/courses')}
+                      >
+                        See Details
+                        <FontAwesomeIcon
+                          className='ml-2 primary-arrow-right'
+                          icon='chevron-right'
+                        />
+                      </a>
+                    </Link>
                   </div>
                 </div>
               </div>
