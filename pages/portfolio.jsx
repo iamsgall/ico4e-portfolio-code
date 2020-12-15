@@ -1,6 +1,5 @@
 import React from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import styles from '../styles/Portfolio.module.sass';
 import Particles from '../functions/Particles';
 import Header from '../components/Header';
 
@@ -31,7 +30,15 @@ export default function Portfolio() {
                   style={{width: '20rem', opacity: 0.94}}
                 >
                   <div className='card-body'>
-                    <h5 className={styles.card_title}>Design UX / UI</h5>
+                    <h5
+                      style={{
+                        fontFamily: 'Quicksand, cursive',
+                        fontSize: 22,
+                        color: '#464646',
+                      }}
+                    >
+                      Design UX / UI
+                    </h5>
                     <p
                       className='card-icon'
                       style={{
@@ -51,7 +58,7 @@ export default function Portfolio() {
                       }}
                     >
                       Ease to create, design, and adapt web user interface with
-                      the help of AdobeXD
+                      the help of AdobeXD and Photoshop
                     </p>
                     <button
                       className='btn btn-primary shadow-sm rounded py-2 px-3'
@@ -76,9 +83,10 @@ export default function Portfolio() {
                 >
                   <div className='card-body'>
                     <h5
-                      className={styles.card_title}
                       style={{
                         color: '#fff',
+                        fontFamily: 'Quicksand, cursive',
+                        fontSize: 22,
                       }}
                     >
                       Frontend Developer
@@ -126,7 +134,13 @@ export default function Portfolio() {
                   style={{width: '20rem', opacity: 0.94}}
                 >
                   <div className='card-body'>
-                    <h5 className={styles.card_title}>
+                    <h5
+                      style={{
+                        fontFamily: 'Quicksand, cursive',
+                        fontSize: 22,
+                        color: '#464646',
+                      }}
+                    >
                       Courses and Certifications
                     </h5>
                     <p
