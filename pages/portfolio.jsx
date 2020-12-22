@@ -3,23 +3,14 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import Particles from '../functions/Particles';
 import Header from '../components/Header';
 import Link from 'next/link';
+import styles from '../styles/Portfolio.module.sass';
 
 export default function Portfolio() {
   return (
     <Particles>
-      <div
-        className='portfolio'
-        style={{
-          height: '100vh',
-        }}
-      >
+      <div className='portfolio mb-4'>
         <Header />
-        <div
-          className='d-flex justify-content-center align-items-center mt-4 '
-          style={{
-            height: '75vh',
-          }}
-        >
+        <div className='height-card d-flex justify-content-center align-items-center mt-4 '>
           <div className='container'>
             <div className='row'>
               <div
@@ -27,33 +18,23 @@ export default function Portfolio() {
                 style={{padding: 0}}
               >
                 <div
-                  className='card text-center mx-3 shadow-sm mt-md-3'
+                  className='card text-center mx-3 shadow-sm mt-md-3 initial-card'
                   style={{width: '20rem', opacity: 0.94}}
                 >
                   <div className='card-body'>
-                    <h5
-                      style={{
-                        fontFamily: 'Quicksand, cursive',
-                        fontSize: 22,
-                        color: '#464646',
-                      }}
-                    >
-                      Design UX / UI
-                    </h5>
-                    <p
-                      className='card-icon'
-                      style={{
-                        color: '#9270be',
-                        fontSize: '1.625rem',
-                        margin: 0,
-                      }}
-                    >
-                      <FontAwesomeIcon icon='palette' />
-                    </p>
+                    <h5 className={styles.title_h5}>Design UX / UI</h5>
+                    <div className={styles.social_media}>
+                      <span className={styles.box_icon_facebook}>
+                        <FontAwesomeIcon
+                          className={styles.icon_facebook}
+                          icon='palette'
+                        />
+                      </span>
+                    </div>
                     <p
                       className='card-text'
                       style={{
-                        color: '#383838',
+                        color: '#fff',
                         fontSize: '17px',
                         fontFamily: 'Questrial, sans-serif',
                       }}
@@ -62,7 +43,7 @@ export default function Portfolio() {
                       the help of AdobeXD and Photoshop
                     </p>
                     <Link href='/portfolio/designs'>
-                      <a className='btn btn-primary shadow-sm rounded py-2 px-3'>
+                      <a className='btn btn-outline-primary shadow-sm rounded py-2 px-3'>
                         See Details
                         <FontAwesomeIcon
                           className='ml-2 primary-arrow-right'
@@ -82,26 +63,17 @@ export default function Portfolio() {
                   style={{}}
                 >
                   <div className='card-body'>
-                    <h5
-                      style={{
-                        color: '#fff',
-                        fontFamily: 'Quicksand, cursive',
-                        fontSize: 22,
-                      }}
-                    >
+                    <h5 className={styles.title_h5} style={{color: '#fff'}}>
                       Frontend Developer
                     </h5>
-                    <p
-                      className='my-2 text-white'
-                      style={{
-                        color: '#9270be',
-                        fontSize: '1.625rem',
-                        margin: 0,
-                      }}
-                    >
-                      {' '}
-                      <FontAwesomeIcon icon='code' />
-                    </p>
+                    <div className={styles.social_media}>
+                      <span className={styles.box_icon_facebook}>
+                        <FontAwesomeIcon
+                          className={styles.icon_facebook}
+                          icon='code'
+                        />
+                      </span>
+                    </div>
                     <p
                       className='card-text text-white'
                       style={{
@@ -132,35 +104,27 @@ export default function Portfolio() {
                 style={{padding: 0}}
               >
                 <div
-                  className='card text-center mx-3 shadow-sm mt-md-3'
+                  className='card text-center mx-3 shadow-sm mt-md-3 final-card'
                   style={{width: '20rem', opacity: 0.94}}
                 >
                   <div className='card-body'>
-                    <h5
-                      style={{
-                        fontFamily: 'Quicksand, cursive',
-                        fontSize: 22,
-                        color: '#464646',
-                      }}
-                    >
+                    <h5 className={styles.title_h5}>
                       Courses and Certifications
                     </h5>
-                    <p
-                      className='card-icon my-2'
-                      style={{
-                        color: '#9270be',
-                        fontSize: '1.625rem',
-                        margin: 0,
-                      }}
-                    >
-                      {' '}
-                      <FontAwesomeIcon icon='graduation-cap' />
-                    </p>
+                    <div className={styles.social_media}>
+                      <span className={styles.box_icon_facebook}>
+                        <FontAwesomeIcon
+                          className={styles.icon_facebook}
+                          icon='graduation-cap'
+                        />
+                      </span>
+                    </div>
                     <p
                       className='card-text'
                       style={{
                         fontSize: '17px',
                         fontFamily: 'Questrial, sans-serif',
+                        color: '#fff',
                       }}
                     >
                       Self-taught through official documentation, YouTube, and
@@ -168,7 +132,7 @@ export default function Portfolio() {
                     </p>
                     <Link href='/portfolio/courses'>
                       <a
-                        className='btn btn-primary shadow-sm rounded py-2 px-3'
+                        className='btn btn-outline-primary shadow-sm rounded py-2 px-3'
                         onClick={() => history.push('/portfolio/courses')}
                       >
                         See Details
@@ -183,17 +147,37 @@ export default function Portfolio() {
               </div>
             </div>
           </div>
-          <style jsx>{`
+        </div>
+      </div>
+      <style jsx>{`
 
-          .middle-card {
-            width: 20rem;
-            border-top: 4px solid #fff;
-            background: rgb(163, 112, 190) !important;
+        .initial-card {
+          background: rgb( 216, 124, 176) !important;
+          opacity: 0.9;
+          width: 20rem;
+          border: none;
+          border-bottom: 4px solid white;
+          border-left: 4px solid white;
+        }
+
+        .middle-card {
+          background: rgb(163, 112, 190) !important;
+          opacity: 0.9;
+          width: 20rem;
+          border: none;
+          border-bottom: 4px solid white;
+          border-right: 4px solid white;
+          }
+
+          .final-card {
+            background: rgb(91, 193, 86) !important;
             opacity: 0.9;
+            width: 20rem;
             border: none;
             border-bottom: 4px solid white;
-            border-right: 4px solid white;
-            }
+          border-left: 4px solid white;
+
+          }
 
           {
                 /* BTN PRIMARY */
@@ -242,15 +226,13 @@ export default function Portfolio() {
             }
 
           @media screen and ( min-width: 992px ){
-            .height-card{
-              height: 100vh
+            .height-card {
+              height: 75vh
             }
           }
 
         }
           `}</style>
-        </div>
-      </div>
     </Particles>
   );
 }
