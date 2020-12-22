@@ -3,7 +3,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import Particles from '../functions/Particles';
 import Header from '../components/Header';
 import Link from 'next/link';
-import styles from '../styles/Portfolio.module.sass';
+import styles from '../styles/portfolio.module.sass';
 
 export default function Portfolio() {
   return (
