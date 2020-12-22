@@ -3,7 +3,6 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import Particles from '../functions/Particles';
 import Header from '../components/Header';
 import Link from 'next/link';
-import styles from '../styles/portfolio.module.sass';
 
 export default function Portfolio() {
   return (
@@ -22,12 +21,16 @@ export default function Portfolio() {
                   style={{width: '20rem', opacity: 0.94}}
                 >
                   <div className='card-body'>
-                    <h5 className={styles.title_h5}>Design UX / UI</h5>
-                    <div className={styles.social_media}>
-                      <span className={styles.box_icon_facebook}>
+                    <h5 className='title_h5'>Design UX / UI</h5>
+                    <div className='social_media'>
+                      <span className='box_icon_facebook'>
                         <FontAwesomeIcon
-                          className={styles.icon_facebook}
+                          className='icon_facebook'
                           icon='palette'
+                          style={{
+                            fontSize: 20,
+                            color: '#212529',
+                          }}
                         />
                       </span>
                     </div>
@@ -63,14 +66,18 @@ export default function Portfolio() {
                   style={{}}
                 >
                   <div className='card-body'>
-                    <h5 className={styles.title_h5} style={{color: '#fff'}}>
+                    <h5 className='title_h5' style={{color: '#fff'}}>
                       Frontend Developer
                     </h5>
-                    <div className={styles.social_media}>
-                      <span className={styles.box_icon_facebook}>
+                    <div className='social_media'>
+                      <span className='box_icon_facebook'>
                         <FontAwesomeIcon
-                          className={styles.icon_facebook}
+                          className='icon_facebook'
                           icon='code'
+                          style={{
+                            fontSize: 20,
+                            color: '#212529',
+                          }}
                         />
                       </span>
                     </div>
@@ -108,14 +115,16 @@ export default function Portfolio() {
                   style={{width: '20rem', opacity: 0.94}}
                 >
                   <div className='card-body'>
-                    <h5 className={styles.title_h5}>
-                      Courses and Certifications
-                    </h5>
-                    <div className={styles.social_media}>
-                      <span className={styles.box_icon_facebook}>
+                    <h5 className='title_h5'>Courses and Certifications</h5>
+                    <div className='social_media'>
+                      <span className='box_icon_facebook'>
                         <FontAwesomeIcon
-                          className={styles.icon_facebook}
+                          className='icon_facebook'
                           icon='graduation-cap'
+                          style={{
+                            fontSize: 20,
+                            color: '#212529',
+                          }}
                         />
                       </span>
                     </div>
@@ -150,6 +159,37 @@ export default function Portfolio() {
         </div>
       </div>
       <style jsx>{`
+
+    .social_media {
+        display: flex;
+        justify-content: center;
+        margin: 8px 0;
+      }
+
+.social_media span {
+    display: flex;
+    width: 42px;
+    height: 42px;
+    background-color: #fff;
+    color: #fff;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    margin: 0 12px;
+}
+
+.icon_facebook {
+        font-size: 20px;
+        color: #212529;
+    }
+
+      .title_h5 {
+        font-family: 'Quicksand, cursive';
+        font-weight: 400;
+        font-size: 26px;
+        color: #fff;
+      }
 
         .initial-card {
           background: rgb( 216, 124, 176) !important;
